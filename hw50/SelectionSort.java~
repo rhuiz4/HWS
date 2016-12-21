@@ -41,11 +41,8 @@ public class SelectionSort
 	//note: this version places greatest value at rightmost end,
 
 	//maxPos will point to position of SELECTION (greatest value)
-    int maxPos = data.size()-1;
-    for (int counter = maxPos;counter > 0; counter--){
-	
-    }
-        
+	int maxPos;
+	/* YOUR IMPLEMENTATION HERE */
     }//end selectionSort
 
 
