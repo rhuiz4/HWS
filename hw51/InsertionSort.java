@@ -55,7 +55,8 @@ public class InsertionSort
     //                Returns sorted copy of input ArrayList.
     public static ArrayList<Comparable> insertionSort( ArrayList<Comparable> input ) 
 {
-	/* YOUR IMPLEMENTATION HERE */	
+    insertionSortV(input);
+    return input;
     }//end insertionSort
 
 
