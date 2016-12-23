@@ -1,3 +1,8 @@
+//Rihui Zheng
+//APCS Pd1
+//Hw51 -- Pokerface
+//12/23/16
+
 /*======================================
   class InsertionSort -- implements InsertionSort algorithm
   ======================================*/
@@ -38,15 +43,19 @@ public class InsertionSort
     // postcondition: data's elements sorted in ascending order
     public static void insertionSortV( ArrayList<Comparable> data ) 
     {
-	int num;
+	int tracker;
 	for (int partition = 1; partition < data.size(); partition++){
-	    num = partition;
-	    while (data.get(num).compareTo(num-1) < 0){
-		data.set(num,data.set(num-1,num));
-		num--;
+	    tracker = partition;
+	    System.out.println("pass " + partition + ":");
+	    while (data.get(tracker).compareTo(data.get(tracker - 1)) < 0){
+		data.set(tracker,data.set(tracker - 1,data.get(tracker)));
+		System.out.println("\tswapped " + tracker + " and " + (tracker-1));
+		tracker--;
+		if (tracker == 0)
+		    break;
 	    }
-	    
 	}
+	
     }//end insertionSortV
 
 
@@ -63,7 +72,7 @@ public class InsertionSort
     public static void main( String [] args ) 
 {
 
-	/*===============for VOID methods=============
+    /*===============for VOID methods=============
 	System.out.println("\n*** Testing sort-in-place (void) version... *** ");
 	ArrayList glen = new ArrayList<Integer>();
 	glen.add(7);
@@ -79,9 +88,9 @@ public class InsertionSort
 	System.out.println( "\nArrayList coco before sorting:\n" + coco );
 	insertionSortV(coco);
 	System.out.println( "\nArrayList coco after sorting:\n" + coco );
-	  ============================================*/
+	============================================*/
 
-	/*==========for AL-returning methods==========
+    /*==========for AL-returning methods==========*/
 	System.out.println( "*** Testing non-void version... *** " );
     	ArrayList glen = new ArrayList<Integer>();
 	glen.add(7);
@@ -102,7 +111,7 @@ public class InsertionSort
 			    + cocoSorted );
 	System.out.println( "\nArrayList coco after sorting:\n" + coco );
 	System.out.println( coco );
-	  ============================================*/
+	/*============================================*/
 
     }//end main
 
